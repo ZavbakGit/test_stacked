@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stacked_services/stacked_services.dart';
 import 'app/locator.dart';
 import 'app/router.gr.dart';
 
@@ -12,6 +13,8 @@ void main() {
 //   Widget build(BuildContext context) {
 //     return MaterialApp(
 //       title: 'Flutter Demo',
+//       navigatorKey: StackedService.navigatorKey,
+//       // home: AddCardView(), // Used when testing a view
 //       initialRoute: Routes.startupViewRoute,
 //       onGenerateRoute: AppRouter().onGenerateRoute,
 //     );
