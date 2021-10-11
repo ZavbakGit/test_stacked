@@ -30,13 +30,16 @@ dependencies:
   flutter:
     sdk: flutter
   stacked: ^2.2.5
-  stacked_services:
+  stacked_hooks:
 
   # Navigation
   auto_route:
+  stacked_services:
 
   get_it:
   injectable:
+  flutter_hooks:
+  #observable_ish:
 
 
   # The following adds the Cupertino Icons font to your application.

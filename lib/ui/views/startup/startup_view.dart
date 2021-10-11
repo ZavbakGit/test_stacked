@@ -2,19 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'startup_viewmodel.dart';
 
-class StartupView extends StatelessWidget {
+class StartupView extends ViewModelBuilderWidget<StartupViewModel> {
+
   @override
-  Widget build(BuildContext context) {
-    return ViewModelBuilder<StartupViewModel>.reactive(
-      builder: (context, model, child) => Scaffold(
-        body: Center(
-          child: Text('Startup View'),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => model.navigateToHome(),
-        ),
+  bool get disposeViewModel => true;
+
+  @override
+  Widget builder(
+      BuildContext context, StartupViewModel viewModel, Widget? child) {
+    return Scaffold(
+      body: const Center(
+        child: Text('Startup View'),
       ),
-      viewModelBuilder: () => StartupViewModel(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => viewModel.navigateToHome(),
+      ),
     );
   }
+
+  @override
+  StartupViewModel viewModelBuilder(BuildContext context) => StartupViewModel();
 }
